@@ -1,27 +1,18 @@
-public final class Customer implements Comparable<Customer> {
-    private String id;
-    private String name;
-    private String phone;
+public final class Customer implements Comparable<Customer>, IdAutoIncrements {
+    private static int nextId = 1;
+    private final int id;
+    private final String name;
+    private final String phone;
 
-    public Customer(String id, String name, String phone) {
-        this.id = id;
+    public Customer(String name, String phone) {
         this.name = name;
         this.phone = phone;
+        this.id = nextId;
+
+        incrementNextId();
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public String getId() {
+    public int getId() {
         return id;
     }
 
@@ -31,6 +22,10 @@ public final class Customer implements Comparable<Customer> {
 
     public String getPhone() {
         return phone;
+    }
+
+    public void incrementNextId() {
+        nextId++;
     }
 
     @Override
