@@ -1,4 +1,4 @@
-public class Customer {
+public final class Customer implements Comparable<Customer> {
     private String id;
     private String name;
     private String phone;
@@ -31,5 +31,10 @@ public class Customer {
 
     public String getPhone() {
         return phone;
+    }
+
+    @Override
+    public int compareTo(Customer otherCustomer) {
+        return this.name.compareTo(otherCustomer.name);
     }
 }
