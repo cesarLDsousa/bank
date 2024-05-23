@@ -31,4 +31,7 @@ public abstract class Account {
         this.balance += value;
     }
 
+    public abstract void addCustomer(Customer customer);
+
+    public abstract void removeCustomer(Customer customer);
 }
