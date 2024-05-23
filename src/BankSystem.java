@@ -117,7 +117,14 @@ public class BankSystem {
         System.out.println("Relatório de Contas:");
 
         for (Account account : accounts) {
-            System.out.println("Número da Conta: " + account.getNumber() + ", Saldo: " + account.getBalance());
+            String accType = account instanceof SavingsAccount ? "Poupança" : "Corrente";
+
+            System.out.println(
+                    "Número da Conta: " + account.getNumber() +
+                            ", Saldo: " + account.getBalance() +
+                            ", Tipo de conta: " + accType
+
+            );
         }
     }
 
