@@ -1,5 +1,5 @@
 public abstract class Account {
-    private int number;
+    private final int number;
     private double balance;
 
     public Account(int number, double balance) {
@@ -9,10 +9,6 @@ public abstract class Account {
 
     public int getNumber() {
         return number;
-    }
-
-    public void setNumber(int number) {
-        this.number = number;
     }
 
     public double getBalance() {
