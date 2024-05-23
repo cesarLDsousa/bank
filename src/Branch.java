@@ -32,8 +32,8 @@ public final class Branch {
         accounts.add(account);
     }
 
-    public void removeAccount(Account account) {
-        accounts.remove(account);
+    public void removeAccount(int number) {
+        accounts.removeIf(account -> account.getNumber() == number);
     }
 
     public Account getAccount(int number) {
