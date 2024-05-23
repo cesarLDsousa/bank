@@ -33,7 +33,13 @@ public class CurrentAccount extends Account {
         this.customer = customer;
     }
 
-    public void removeCustomer() {
+    @Override
+    public void addCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    @Override
+    public void removeCustomer(Customer customer) {
         this.customer = null;
     }
 }

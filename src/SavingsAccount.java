@@ -33,12 +33,13 @@ public final class SavingsAccount extends Account {
         this.customer = customer;
     }
 
-
+    @Override
     public void addCustomer(Customer customer) {
         this.customer = customer;
     }
 
-    public void removeCustomer() {
+    @Override
+    public void removeCustomer(Customer customer) {
         this.customer = null;
     }
 }
