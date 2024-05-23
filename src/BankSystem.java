@@ -76,10 +76,12 @@ public class BankSystem {
         int accNo = scanner.nextInt();
 
         System.out.print("Saldo Inicial: ");
-        double balance = Double.parseDouble(scanner.nextLine());
+        double balance = scanner.nextDouble();
 
         System.out.print("Tipo de Conta (1 - Poupança, 2 - Corrente): ");
-        int accountType = Integer.parseInt(scanner.nextLine());
+        int accountType = scanner.nextInt();
+
+        scanner.nextLine();
 
         System.out.print("ID do Cliente: ");
         String customerId = scanner.nextLine();
@@ -98,7 +100,9 @@ public class BankSystem {
 
         if (accountType == 1) {
             System.out.print("Saldo Mínimo: ");
-            double minBalance = Double.parseDouble(scanner.nextLine());
+            double minBalance = scanner.nextDouble();
+
+            scanner.nextLine();
 
             System.out.print("Data de Abertura: ");
             String dateOfOpening = scanner.nextLine();
@@ -106,7 +110,9 @@ public class BankSystem {
             account = new SavingsAccount(accNo, balance, minBalance, dateOfOpening);
         } else {
             System.out.print("Taxa de Juros: ");
-            double interestRate = Double.parseDouble(scanner.nextLine());
+            double interestRate = scanner.nextDouble();
+
+            scanner.nextLine();
 
             System.out.print("Data de Abertura: ");
             String dateOfOpening = scanner.nextLine();
