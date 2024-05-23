@@ -41,7 +41,7 @@ public final class InputReader {
         }
 
         double input = scanner.nextDouble();
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
 
         return input;
     }
